@@ -311,10 +311,10 @@ function draw() {
         document.body.appendChild(raindom);
     }
 }
-// let intimers = 0;
-// intimers = setInterval(() => {
-//     draw();
-// }, 10);
+let intimers = 0;
+intimers = setInterval(() => {
+    draw();
+}, 10);
 /* 蒙版效果 */
 let shut = document.querySelector('.shut');
 let draws = document.querySelector('#draw');
@@ -322,6 +322,7 @@ let datest = document.querySelector('#time').children[0];
 let header = document.querySelector('.header');
 let banner = document.querySelector('#banner');
 let footer = document.querySelector('.footer');
+let nextpage = document.querySelector('.nextpage');
 datest.addEventListener('click', function () {
     toshow();
 })
@@ -334,6 +335,7 @@ function toshow() {
     header.classList.add('show');
     banner.classList.add('show');
     footer.classList.add('show');
+    nextpage.classList.add('show');
 }
 function tohide() {
     shut.style.display = 'none';
@@ -341,6 +343,7 @@ function tohide() {
     header.classList.remove('show');
     banner.classList.remove('show');
     footer.classList.remove('show');
+    nextpage.classList.remove('show');
 }
 /* 蒙版轮播图 */
 let evenviewli = document.querySelector('.evenview').querySelectorAll('li');

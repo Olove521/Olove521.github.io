@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .dark {
@@ -220,12 +221,15 @@ body {
     color: var(--text-primary);
 }
 
+
 a {
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: var(--text-primary);
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 li {
@@ -304,7 +308,8 @@ svg {
 
 
 
-.container {
+.container,
+.incontainer {
     width: 80%;
     height: 100%;
     display: flex;
@@ -314,7 +319,8 @@ svg {
     overflow: hidden;
 }
 
-.container .more {
+.container .more,
+.incontainer .more {
     position: relative;
     width: 25px;
     height: 25px;
@@ -351,8 +357,8 @@ svg {
 }
 
 .sidemenulist ul li {
-    height: 40px;
-    line-height: 40px;
+    height: 60px;
+    line-height: 60px;
     border-bottom: 1px solid var(--shadow-02);
 
 }
@@ -577,7 +583,6 @@ a.right {
     position: absolute;
     float: left;
     border-radius: 50px;
-    background: #0085f2;
     overflow: hidden;
 
 }
@@ -647,12 +652,12 @@ a.right {
     width: 60%;
     height: 60%;
     display: flex;
+    align-items: center;
 }
 
 .eventconnect ul {
-    width: 50%;
+    width: 100%;
     height: 20%;
-    margin: auto;
 }
 
 .eventconnect ul li {
@@ -664,9 +669,6 @@ a.right {
 .eventconnect a {
     flex-direction: row-reverse;
     position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
 }
 
 .eventconnect a span {
@@ -691,6 +693,7 @@ a.right {
     position: absolute;
     padding: 10%;
     display: none;
+    box-shadow: var(--shadow-01);
     background: var(--background-toc-active);
 }
 
@@ -855,7 +858,6 @@ span.select {
     opacity: 1;
     width: 20px;
     height: 10px;
-    margin: 0 5px;
     border-radius: 10px;
 }
 
@@ -864,6 +866,10 @@ span.select {
     bottom: 15px;
     width: 24px;
     height: 24px;
+}
+
+.nextpage.show {
+    display: none;
 }
 
 .nextpage span {
@@ -1033,6 +1039,10 @@ span.select {
     overflow: hidden;
 }
 
+.musiclist ol li a {
+    justify-content: flex-start;
+}
+
 .musiclist ol li:hover {
     background: var(--text-inactive);
 }
@@ -1196,17 +1206,13 @@ input[type=checkbox]:checked ~ .moremenu > .part.part2 {
     opacity: 1;
 }
 
-.musiccontorl .playerback {
-    left: 10px;
-}
-
 .musiccontorl .playerprev {
     left: 45px;
 }
 
 .musiccontorl .playerplay,
 .musiccontorl .playerpause {
-    left: 80px;
+    left: 85px;
     display: none;
 }
 
@@ -1215,11 +1221,7 @@ input[type=checkbox]:checked ~ .moremenu > .part.part2 {
 }
 
 .musiccontorl .playernext {
-    left: 115px;
-}
-
-.musiccontorl .playerspeed {
-    left: 155px;
+    left: 125px;
 }
 
 #calendar {
@@ -1270,14 +1272,12 @@ input[type=checkbox]:checked ~ .moremenu > .part.part2 {
 .oncalendar {
     width: 100%;
     height: 100%;
-    background: #004d92;
 }
 
 .oncalendar .oncontorl {
     width: 100%;
     height: 15%;
     position: relative;
-    background: #007936;
     float: left;
 }
 
