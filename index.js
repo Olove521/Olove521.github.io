@@ -311,10 +311,10 @@ function draw() {
         document.body.appendChild(raindom);
     }
 }
-let intimers = 0;
-intimers = setInterval(() => {
-    draw();
-}, 10);
+// let intimers = 0;
+// intimers = setInterval(() => {
+//     draw();
+// }, 10);
 /* 蒙版效果 */
 let shut = document.querySelector('.shut');
 let draws = document.querySelector('#draw');
